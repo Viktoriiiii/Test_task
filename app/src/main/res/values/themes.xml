@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Theme.Test_task" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
@@ -14,7 +14,7 @@
         <item name="android:statusBarColor">@color/for_toolbar</item>
         <!-- Customize your theme here. -->
         <item name="android:windowBackground">@color/main_background</item>
-        <item name="android:textColor">@color/for_text</item>
+        <item name="android:textColor">@color/for_text_toolbar</item>
         <item name="android:textSize">16sp</item>
     </style>
     <style name="ButtonAccent" parent="Theme.Test_task">

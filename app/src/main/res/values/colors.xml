@@ -10,5 +10,7 @@
     <color name="main_background">#E8E6E6</color>
     <color name="for_button">#FEE871</color>
     <color name="for_toolbar">#0AB66C</color>
-    <color name="for_text">#FFFFFF</color>
+    <color name="for_text_toolbar">#FFFFFF</color>
+    <color name="for_text">#716646</color>
+    <color name="for_hint">#959393</color>
 </resources>
