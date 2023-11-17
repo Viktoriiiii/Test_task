@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="ru.spb.viktorii.test_task.welcome_screen.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_catalogFragment"
+            app:destination="@id/catalogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/catalogFragment"
+        android:name="ru.spb.viktorii.test_task.catalog_screen.CatalogFragment"
+        android:label="fragment_catalog"
+        tools:layout="@layout/fragment_catalog" >
+        <action
+            android:id="@+id/action_catalogFragment_to_productDescriptionFragment"
+            app:destination="@id/productDescriptionFragment" />
+        <action
+            android:id="@+id/action_catalogFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDescriptionFragment"
+        android:name="ru.spb.viktorii.test_task.product_description_screen.ProductDescriptionFragment"
+        android:label="fragment_product_description"
+        tools:layout="@layout/fragment_product_description" >
+        <action
+            android:id="@+id/action_productDescriptionFragment_to_catalogFragment"
+            app:destination="@id/catalogFragment" />
+    </fragment>
+</navigation>
