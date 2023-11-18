@@ -3,7 +3,7 @@ package ru.spb.viktorii.test_task.catalog_screen.network
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query
-import ru.spb.viktorii.test_task.catalog_screen.model.Product
+import ru.spb.viktorii.test_task.model.Product
 
 interface ProductService {
     @GET("products")

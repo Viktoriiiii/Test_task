@@ -1,5 +1,6 @@
 package ru.spb.viktorii.test_task.catalog_screen.adapter
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +11,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import ru.spb.viktorii.test_task.R
-import ru.spb.viktorii.test_task.catalog_screen.model.Product
+import ru.spb.viktorii.test_task.model.Product
 import ru.spb.viktorii.test_task.utils.BASE_URL_FOR_IMAGE
 import ru.spb.viktorii.test_task.utils.MAIN
 
@@ -63,6 +64,13 @@ class ProductAdapter : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() 
                 .into(holder.productPhoto)
         } else {
             holder.productPhoto.setImageResource(R.drawable.logo)
+        }
+
+        holder.productContainer.setOnClickListener {
+            val bundle = Bundle().apply {
+                putParcelable("selectedProduct", item)
+            }
+            MAIN.navController.navigate(R.id.action_catalogFragment_to_productDescriptionFragment, bundle)
         }
     }
 

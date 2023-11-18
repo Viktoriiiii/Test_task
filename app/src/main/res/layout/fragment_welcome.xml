@@ -6,6 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".welcome_screen.WelcomeFragment">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingHorizontal="24dp"
+        android:text="@string/welcome"
+        android:textColor="@color/for_text"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mb_to_catalog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/mb_to_catalog"
         style="@style/ButtonAccent"

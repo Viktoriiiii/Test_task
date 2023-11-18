@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.Observer
+import android.widget.Toast
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import ru.spb.viktorii.test_task.R
 import ru.spb.viktorii.test_task.catalog_screen.adapter.ProductAdapter
@@ -31,6 +31,13 @@ class CatalogFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         MAIN.changeItemsInToolbar(getString(R.string.catalog), true)
         showInfoAboutProducts()
+        binding.srl.setOnRefreshListener {
+            vmCatalog.getProducts()
+            if (vmCatalog.requestSuccess.value != true) {
+                Toast.makeText(MAIN, getString(R.string.network_error), Toast.LENGTH_SHORT).show()
+            }
+            binding.srl.isRefreshing = false
+        }
     }
 
     private fun showInfoAboutProducts() {

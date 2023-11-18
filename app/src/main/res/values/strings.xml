@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">Вимос</string>
     <string name="catalog">Каталог</string>
+    <string name="description">Описание товара</string>
     <string name="article">Артикул</string>
     <string name="back">back</string>
     <string name="photo">photo</string>
+    <string name="network_error">Произошла ошибка при обновлении данных. Проверьте ваше соединение с сетью</string>
+    <string name="welcome">Добро пожаловать за покупками!</string>
 </resources>
